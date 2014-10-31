@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <title>Analysis</title>
+   
+    <!-- Bootstrap core CSS -->
+    
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+   
+
+    <!-- Custom styles for this template -->
+    
+    <style id="holderjs-style" type="text/css"></style>
+</head>
+
+<!-- NAVBAR
+================================================== -->
+  
+  <body>
+    <% include Menu.ejs %>
+  </div>
+ <hr class="shadow row" >
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+     <!-- START THE FEATURETTES -->
+
+      <!-- <hr class="featurette-divider"> -->
+
+      <div class="btn-row">
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-danger" onclick="showNumFrequency()">Most Frequent Numbers</button>
+            </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-warning" onclick="showLowestFrequency()">Low & High Numbers</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-success" onclick = "showAverageDaysForWinNum()">Avg Draws between wins</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-info" onclick="row_diff_table()">Row differences</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-primary" onclick = "showDuo()">Winning Pairs</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-info" onclick = "showTriosTable()">Winning Triples</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-success" onclick = "showReatingnum()">Repeating Numbers</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-warning" onclick = "showConsecutiveNum()">Consecutive Numbers</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-pt btn-danger" onclick = "getOddEven()">Odd / Even</button>
+              </div>
+              
+        </div>
+        <div class="container" >
+
+    <div class="container marketing">
+        
+        <h3 class="featurette-head">SuperLotto Pattern Analysis</h3>
+        <div class="well"> 
+            Have a Million Dollar dream??? Want to win the superlotto??? <br><br>
+Increase your chance of a milion dollar hit....
+The historical occurence of numbers is NO GUARANTEE of continued performance or future occurence. While players have a 1 in 23 chance of winning a prize, the mathematical odds of winning the SuperLotto Plus lottery are still 1 in 41 million. For more chances at winning it big, try the SuperLotto Pattern Analysis.
+
+Click on any of the patterns..and get started !!!
+
+        </div>
+        
+        <br>      
+        <div class="col-md-18" id = "chart">
+
+          <!-- place graph in this div -->
+           <!--<img class="featurette-image img-responsive" src="images/original_11161.jpg">-->
+           
+        </div> 
+        <div id="pie"></div>
+        </div>
+      </div>
+
+        <hr class="featurette-divider">          
+        </div>
+        
+      </div>
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+  </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/queries.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>  
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="/js/d3pie.min.js"></script>
+</body></html>

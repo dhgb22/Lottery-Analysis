@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lottery Analysis</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+   <script src="http://d3js.org/d3.v3.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script>
+ 	function getduos()
+ 	{
+ 		$.get("/getduos", function(rows)
+ 		{
+ 			
+ 			var json = movieList;
+ 			
+ 			var margin = {top: 20, right: 20, bottom: 30, left: 40},
+ 	    	width = 960 - margin.left - margin.right,
+ 	    	height = 500 - margin.top - margin.bottom;
+ 			
+ 			//var results,data = [],chart,bars;
+ 	 
+ 	    	//results = d3.map( json );
+ 	    	/*results.forEach( function( key, val ) {
+ 	        	var result = {};
+ 	        	result.num1 = parseInt( val.num1);
+ 	        	result.cnt = parseInt( val.cnt);
+ 	        	data.push( result );
+ 	    	} );*/
+ 	    	
+ 	    	var x = d3.scale.ordinal().rangeRoundBands([0, width], .1).domain(json.map(function(d) { return d.num1; }));
+ 	 		
+ 			var y = d3.scale.linear().range([height, 0]).domain([0, d3.max(json, function(d) { return d.cnt; })]);
+ 	    	
+ 	    	// x.domain(results.map(function(d) { return d.num1; }));
+ 	    	// y.domain([0, d3.max(results, function(d) { return d.cnt; })]);
+ 	    
+ 	   		chart = d3.select( 'body' ).append( 'svg' )
+       				.attr( 'class', 'chart' )
+       				.attr("width", width + margin.left + margin.right)
+    				.attr("height", height + margin.top + margin.bottom)
+       				.append('g')
+        			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+ 	   		
+ 	   		
+
+ 
+  	 		chart.selectAll(".bar")
+   				.data(data)
+ 				.enter().append("rect")
+   				.attr("class", "bar")
+   				.attr("x", function(d) { return x(d.num1); })
+   				.attr("width", x.rangeBand())
+   				.attr("y", function(d) { return y(d.cnt); })
+   				.attr("height", function(d) { return height - y(d.cnt); }); 
+
+ 			
+ 			
+ 			
+ 			var xAxis = d3.svg.axis().scale(x).orient("bottom");
+
+  	 		chart.append('g').attr('class', 'x axis').attr("transform", "translate(0," + height + ")").call(xAxis);
+  	 		
+  	 		//var yAxis = d3.svg.axis().scale(y).orient("left").ticks(10, "%");
+  	 		
+  	 		var yAxis = d3.svg.axis().scale(y).orient("left");
+   			
+
+  	 		chart.append("g")
+			.attr("class", "y axis")
+			.call(yAxis)
+			.append("text")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 6)
+			.attr("dy", ".71em")
+			.style("text-anchor", "end")
+			.text("Frequency");
+   			
+ 		});
+ 		
+ 	}		
+ 	
+ </script>
+    
+  </head>
+  <body>
+    <p>Welcome to Lottery Analysis</p>
+   	<input type="button" onclick="getduos()" value="test"/>
+   	<div id="chart"></div>
+  </body>
+</html>

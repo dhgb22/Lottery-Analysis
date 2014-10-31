@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>272_Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+  <style type="text/css"></style><style id="holderjs-style" type="text/css"></style></head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  
+    <% include Menu.ejs %>
+
+
+    <!-- Carousel
+    ================================================== -->
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">      
+          <div class="container" id="slide">
+          </div>
+        </div>
+        <div class="item">
+          <div class="container" id="slide2">
+             <div class="carousel-caption">
+             
+             </div>
+
+            
+          </div>
+        </div>
+        <div class="item">        
+          <div class="container" id="slide3">          
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+   <!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <% if(typeof win != "undefined" && win != ""){%>
+        <h1>Winning Numbers on last draw : <%= win[0].drawdate%></h1> 
+
+        <p></p>
+        
+        
+        <div class="col-lg-4">
+          <% if(win[0].num1 <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].num1%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].num1%></h3>
+          <%}%>
+          
+          <img class="img-circle" data-src="holder.js/100x100" alt="100x100" src="images/ball.png" style="width: 100px; height: 100px;">                   
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <% if(win[0].num2 <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].num2%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].num2%></h3>
+          <%}%>
+          <img class="img-circle" data-src="holder.js/100x100" alt="100x100" src="images/ball.png" style="width: 100px; height: 100px;">
+          
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <% if(win[0].num3 <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].num3%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].num3%></h3>
+          <%}%>
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="images/ball.png">
+          
+          
+        </div><!-- /.col-lg-4 -->
+         <div class="col-lg-4">
+          <% if(win[0].num4 <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].num4%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].num4%></h3>
+          <%}%>
+          <img class="img-circle" data-src="holder.js/100x100" alt="100x100" src="images/ball.png" style="width: 100px; height: 100px;">
+          
+          
+          
+        </div><!-- /.col-lg-4 -->
+         
+        <div class="col-lg-4">
+          <% if(win[0].num5 <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].num5%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].num5%></h3>
+          <%}%>
+          <img class="img-circle" data-src="holder.js/100x100" alt="100x100" src="images/ball.png" style="width: 100px; height: 100px;">
+          
+          
+          
+        </div><!-- /.col-lg-4 -->
+         
+        <div class="col-lg-4">
+          <% if(win[0].meganum <= 9 ){%>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;">&nbsp;<%= win[0].meganum%></h3>
+          <%}else{ %>
+          <h3 style="margin-top: 40px;position: absolute;margin-left: 70px; color:yellow;"><%= win[0].meganum%></h3>
+          <%}%>
+          <img class="img-circle" data-src="holder.js/100x100" alt="100x100" src="images/megaball.png" style="width: 100px; height: 100px;">
+                
+        </div><!-- /.col-lg-4 -->
+        <%}%>
+       </div><!-- /.row -->
+
+
+       
+      <!-- START THE FEATURETTES -->
+
+      <!-- <hr class="featurette-divider"> -->
+
+     
+      </div>
+
+            
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+  
+
+</body></html>

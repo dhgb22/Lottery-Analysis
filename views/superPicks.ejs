@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <title>Super Pics</title>
+   
+    <!-- Bootstrap core CSS -->
+    
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+   
+
+    <!-- Custom styles for this template -->
+    
+    <style id="holderjs-style" type="text/css"></style>
+</head>
+
+<!-- NAVBAR
+================================================== -->
+  
+  <body>
+    <% include Menu.ejs %>
+  <div class="container marketing">
+ <hr class="shadow row" >
+  <h3 class="featurette-head">Super Picks </h3>
+  <div class="well"><p>Some people believe that numbers are lucky.. If they were drawn before..  They'll be drawn again...</p>
+   <p>Others believe numbers have equal probability of being drawn. If they are drawn less frequently before..They are more likely to be picked this time..</p>
+   <p>We here create a mix and match of numbers..Bring your views together and create a super mix..</p>
+   <p>This is your smart pick..</p>
+   <p>Wats more.. </p><p>These come from the latest lottery results..</p>
+   <p>Choose from these and.. Who knows...you might be the next millionaire!!!!</p>
+</div>
+    <div class='panel panel-default'><table class='table'>
+      <%  for(var i = 0 ; i < superNumbers.length ; i++){  %>
+      <tr style='color:#39b3d7'>
+      <% if(superNumbers[i][0]>9){ %>
+        <td ><div class='testball'><h3 class='htag'><%= superNumbers[i][0] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% }else{ %>
+        <td ><div class='testball'><h3 class='htag'>&nbsp;<%= superNumbers[i][0] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% } %>
+      
+       <% if(superNumbers[i][1]>9){ %>
+        <td ><div class='testball'><h3 class='htag'><%= superNumbers[i][1] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% }else{ %>
+        <td ><div class='testball'><h3 class='htag'>&nbsp;<%= superNumbers[i][1] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% } %>
+      
+       <% if(superNumbers[i][2]>9){ %>
+        <td ><div class='testball'><h3 class='htag'><%= superNumbers[i][2] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% }else{ %>
+        <td ><div class='testball'><h3 class='htag'>&nbsp;<%= superNumbers[i][2] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% } %>
+      
+       <% if(superNumbers[i][3]>9){ %>
+        <td ><div class='testball'><h3 class='htag'><%= superNumbers[i][3] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% }else{ %>
+        <td ><div class='testball'><h3 class='htag'>&nbsp;<%= superNumbers[i][3] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% } %>
+      
+       <% if(superNumbers[i][4]>9){ %>
+        <td ><div class='testball'><h3 class='htag'><%= superNumbers[i][4] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% }else{ %>
+        <td ><div class='testball'><h3 class='htag'>&nbsp;<%= superNumbers[i][4] %></h3><img class='testimg-circle' data-src='holder.js/100x100' src='images/ball.png'></div></td>
+      <% } %>
+      
+      
+       
+       
+      </tr>
+      <% } %>
+    </table>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+     <!-- START THE FEATURETTES -->
+
+      <!-- <hr class="featurette-divider"> -->
+      
+      
+        
+      </div>
+       <div class="well" id = "strategy"><p>Strategy Used to choose Super Picks</p>
+        <p>Hot numbers: These are the most frequently occuring numbers...</p>
+       <p>Cold numbers: These are the numbers that have occured very few times in near past..</p>
+       <p> Overdue numbers: These are the numbers that have occured at larger distances in past..</p>
+
+       <p>Mixing the recent picks we generate statisctically analysed smart pick..Just for you..</p>
+       </div>
+
+      <!-- /END THE FEATURETTES -->
+
+   
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/queries.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>  
+    <script src="/js/d3pie.min.js"></script>
+</body></html>

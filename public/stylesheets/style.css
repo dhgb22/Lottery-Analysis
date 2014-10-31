@@ -1,0 +1,119 @@
+.bar {
+  fill: #d43f3a;
+}
+
+.bar:hover {
+  fill: #eea236;
+}
+
+.yellow-bar{
+     fill: #eea236;
+}
+
+.yellow-bar:hover{
+     fill: #d43f3a;
+}
+
+.blue-bar{
+    fill:steelblue;
+}
+
+.blue-bar:hover{
+    fill:#bce8f1;
+}
+
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+
+
+.matchcase{
+color: #FFFFFF;
+//background-color: #415E9B;
+background-color: #5cb85c;
+}
+
+.consecutive{
+
+color: #FFFFFF;
+background-color: #f0ad4e;
+
+}
+
+table,th,td
+{
+/* border:1px solid white; */
+
+text-align: center;
+}
+
+.line {
+  fill: none;
+  stroke: #4cae4c;
+  stroke-width: 1.5px;
+}
+
+
+.testimg-circle{
+border-radius:25%;
+z-index:-1;
+width:50px;
+height:50px;
+}
+.htag{
+margin-top: 12px;
+position: absolute;
+margin-left: 13px;
+color:yellow;
+}
+
+.testball{
+width:16.33333333%;
+position:relative;
+min-height:1px;
+padding-left:25px;
+padding-right:25px;
+margin-bottom:5px;
+}
+
+// Style for tooltip
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
